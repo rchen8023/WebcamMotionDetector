@@ -40,6 +40,9 @@ while True:
         cv2.rectangle(frame, (x,y), (x+w,y+h), (0,0,255), 3)
 
     status_list.append(status)
+
+    status_list = status_list[-2:] # memory improve 
+    
     if status_list[-1] != status_list[-2]:
         times.append(datetime.now())
     
